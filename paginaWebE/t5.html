@@ -1,0 +1,70 @@
+<html>
+<head>
+  <script type="text/javascript">
+        function calcular(){
+            
+        
+    signo=document.getElementById("signo").value;
+    n1=parseInt(document.getElementById("n1").value);
+    n2=parseInt(document.getElementById("n2").value);
+    if(signo=="Suma"){
+        r=n1+n2;
+        document.getElementById("resultado").value=r;
+    }
+        if(signo=="Resta"){
+        r=n1-n2;
+        document.getElementById("resultado").value=r;
+    }
+    if(signo=="Multiplicacion"){
+        r=n1*n2;
+        document.getElementById("resultado").value=r;
+    }
+        if(signo=="Division"){
+        r=n1/n2;
+        document.getElementById("resultado").value=r;
+    }
+            
+        }
+        function borrar(){
+        document.getElementById("resultado").value="";
+        n1=document.getElementById("n1").value="";
+        n2=document.getElementById("n2").value="";
+        }
+        
+    </script>
+    </head>
+    
+    <body>
+   <div class="padre">
+    <div class="uno">
+        <br>
+        <h1>Operacion</h1>
+        <p>Debe elegir el tipo de operacion a realizar.</p>
+        <select name="est" required id="signo">
+        <option value="0" readonly>Seleccione la operacion.</option>
+        <option value="Suma" readonly >Suma</option>
+        <option value="Resta" readonly >Resta</option>
+        <option value="Multiplicacion" readonly >Multiplicacion</option>
+        <option value="Division" readonly >Division</option>
+    </select>
+
+    </div>
+    <div class="dos">
+        <br>
+     <h2>Calculadora</h2>
+     <br><br>
+     <form><br>
+        <input type="text" placeholder="Numero 1" id="n1"><br><br>
+        <input type="text" placeholder="Numero 2" id="n2"><br><br><br>
+        <input type="button" value="Calcular" onclick="calcular();">
+        <input type="button" value="Limpiar" onclick="borrar();">
+        <input  class="salir" type="button" value="Salir">
+     </form>
+    </div>
+    <div class="tres">
+        <h2>Resultado</h2><br><br>
+        <input type="text" id="resultado" readonly><br><br>
+    </div>
+</div>
+    </body>
+</html>

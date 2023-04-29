@@ -1,0 +1,219 @@
+<html>
+<head>
+     <script type="text/javascript">
+    function calcular(){
+        var c1;
+        var c2;
+        var c3;
+        var p;
+        var s;
+        
+        c1=parseInt(document.getElementById("cal1").value);
+        c2=parseInt(document.getElementById("cal2").value);
+        c3=parseInt(document.getElementById("cal3").value);
+        s=c1+c2+c3;
+        p=s/3;
+        document.getElementById("prom").value=p;
+         document.getElementById("suma").value=s;
+        
+        
+        if(p<6){
+            document.getElementById("apro").value="reprobado"; 
+        }
+        else{
+             document.getElementById("apro").value="aprobado";
+        }
+    }
+        
+        function borrar(){
+            document.getElementById('cal1').value=" ";
+            document.getElementById('cal2').value=" ";
+            document.getElementById('cal3').value=" ";
+            document.getElementById('suma').value=" ";
+            document.getElementById('prom').value=" ";
+            document.getElementById('apro').value=" ";
+            document.getElementById('cal1').focus;
+        }
+    </script>
+    <style type="text/css">
+        .one{
+              
+     background-color: #42597b;
+           border-bottom: yellow 3px solid;
+             border-top: yellow 3px solid;
+            width: 1505px;
+            height: 550px;
+            position: absolute;
+            align-items: center;
+            top: 70px;
+            
+            text-align: center;
+            font-family: "Segoe UI";
+        }
+        .foto{
+            position: absolute;
+            top: 25%;
+            left: 548px;
+            
+        }
+        .two{
+            background: rgba( 255, 255, 255, 0.25 );
+
+backdrop-filter: blur( 4px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+            width: 400px;
+            height: 700px;
+            position: absolute;
+            align-items: center;
+            
+            
+           left: 1020px;
+            text-align: center;
+
+        }
+        .ti{
+                        font-family: "Segoe UI";
+            font-size: 14pt;
+             background: url("portada/fondo.jpg");
+            -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+        }
+        label{
+            font-family: "Segoe UI";
+            font-size: 20pt;
+            font-weight: bolder;
+             background: #42597b;
+            -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+        }
+        .tex input[type="text"]{
+            height: 50px;
+            width: 300px;
+            text-align: center;
+            border: 0;
+            background-color: #42597b;
+            border-radius: 10px;
+        }
+        ::placeholder{color: #2B336A;}
+        .boton input[type="button"]{
+           background-color: red;
+            border-color: yellow;
+             
+	box-shadow: 0 8px 30px 0 rgba(134, 123, 240, 0.36);
+	font-family: "Segoe UI";
+	padding: 0.5em 1.9em;
+	margin: 2.3em 0 0 0;
+	border-radius: 7px;
+	font-size: 1.4em;
+	cursor: pointer;
+	color: yellow;
+	font-size: 1em;
+            font-weight: bolder;
+        }
+        button{
+             background-color: black;
+            border-color: yellow;
+             
+	box-shadow: 0 8px 30px 0 rgba(134, 123, 240, 0.36);
+	font-family: "Segoe UI";
+	padding: 0.5em 1.9em;
+	margin: 2.3em 0 0 0;
+	border-radius: 7px;
+	font-size: 1.4em;
+	cursor: pointer;
+	color: yellow;
+	font-size: 1em;
+            font-weight: bolder;
+        }
+        .boton2{
+          width: 170px;
+            position: absolute;
+            left: 20px;
+          
+        }
+        .resultado{
+           
+            width: 400px;
+            height: 320px;
+             position: absolute;
+            left: 20px;
+            top: 180px;
+            font-family: "Segoe UI"; 
+        }
+        .ti2{
+             
+            width: 400px;
+            height: 80px;
+             position: absolute;
+            left: 20px;
+            top: 100px;
+            font-family: "Segoe UI";
+            font-size: 14pt;
+             background: url("portada/fondo.jpg");
+            -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+        }
+        .resultado input[type="text"]{
+            height: 50px;
+            width: 300px;
+            text-align: center;
+            border: 0;
+            background-color: #6181B1;
+            border-radius: 10px;
+        }
+        
+        
+    </style> 
+    </head>
+    <body background="portada/fondo.jpg">
+        <form>
+    <div class="one">
+       <div class="foto"> <img src="portada/fondo4.jpg"></div>
+       
+        <div class="boton2">
+             <button onclick="history.back()">↩ REGRESAR</button>
+            </div>
+         <div class="ti2">
+            <h2>PROMEDIO</h2>
+        </div>
+        <div class="resultado"> 
+            <br>
+         <input type="text" id="suma" name="suma" placeholder="SUMA" readonly>
+            <br><br><br><br>
+             <input type="text" id="prom" name="prom" placeholder="PROMEDIO" readonly>
+            <br><br><br><br>
+             <input type="text" id="apro" name="apro" placeholder="APROBADO/REPROBADO" readonly>
+        </div>
+        </div>
+        <div class="two">
+        <div class="ti">
+            <h2>CALIFICAIONES</h2>
+            </div>
+            
+            <div class="tex">
+                <br><br>
+                <label>Calificacion Uno</label>
+                <br><br>
+                <input type="text" id="cal1" name="calificaion1" placeholder="Escribe la Primer Calificacion">
+                <br><br><br><br>
+                <label>Calificacion Dos</label>
+                <br><br>
+                <input type="text" id="cal2" name="calificaion2" placeholder="Escribe la Segunda Calificacion">
+                 <br><br><br><br>
+                <label>Calificacion Dos</label>
+                <br><br>
+                <input type="text" id="cal3" name="calificaion3" placeholder="Escribe la Tercera Calificacion">
+                </div>
+                <div class="boton">
+                    <br>
+                <input type="button" value="CALCULAR" onclick="calcular()">
+                    <input type="button" value="BORRAR" onclick="borrar()">
+                </div>
+            
+            
+        </div>
+            </form>
+    </body>
+</html>
